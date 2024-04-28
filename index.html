@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .center-button {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 10px;
+        background-color: red;
+        color: white;
+        border-color: black;
+        border-radius: 9px;
+        border-width: 1px;
+        cursor: pointer;
+      }
+
+      .info-box {
+        position: fixed;
+        top: 10%;
+        color: black;
+        border-color: black;
+        left: 50%;
+        transform: translate(-74%, -74%);
+        padding: 90px 100px;
+        background-color: red;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        display: none;
+      }
+
+      .center-button:active + .info-box {
+        display: block;
+        /* z-index: 999; */
+      }
+
+      .info-box:active {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="center-button">Read info</button>
+    <div class="info-box">This is the info</div>
+  </body>
+</html>
